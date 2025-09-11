@@ -26,6 +26,7 @@ langchain-core = "^0.3.76"
 pypdf = "^6.0.0"
 torch = "^2.8.0"
 sentence-transformers = "^5.1.0"
+chromadb = "^1.0.20"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
 pytest-cov = "^5.0.0"

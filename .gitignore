@@ -208,3 +208,4 @@ __marimo__/
 
 src/.rag-documents/
 src/data/chunks/
+src/data/chroma_store/

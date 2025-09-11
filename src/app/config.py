@@ -18,6 +18,11 @@ class ChunkConfig(BaseModel):
     chunk_size: int = os.getenv("CHUNK_SIZE", 500)
     chunk_overlap: int = os.getenv("CHUNK_OVERLAP", 50)
 
+class VectorDBConfig(BaseModel):
+    chroma_path: str = os.getenv("CHROMA_PATH", "data/chroma_store")
+    collection_name: str = os.getenv("COLLECTION_NAME", "documents")
+
 data_storage = DataStorageConfig()
 model_config = ModelConfig()
 chunk_config = ChunkConfig()
+vector_db_config = VectorDBConfig()

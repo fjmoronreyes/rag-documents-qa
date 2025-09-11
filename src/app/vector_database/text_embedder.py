@@ -25,3 +25,15 @@ class TextEmbedder:
         embeddings = self.model.encode(docs, truncate_dim=self.embedding_dim)
         self.logger.info(f"Generated {len(embeddings)} embeddings of length {len(embeddings[0])}")
         return [e.tolist() for e in embeddings]
+
+    def embed_query(self, text: str) -> List[float]:
+        """
+        Embed a single query (for retrieval).
+        """
+        if not text:
+            self.logger.warning("Empty query text provided")
+            return []
+
+        embedding = self.model.encode([text], truncate_dim=self.embedding_dim)[0]
+        self.logger.info(f"Generated embedding of length {len(embedding)} for query")
+        return embedding.tolist()
