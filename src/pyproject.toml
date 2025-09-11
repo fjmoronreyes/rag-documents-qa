@@ -18,6 +18,13 @@ package-mode = false
 python = ">=3.11.9,<3.13"
 
 # Development tools
+dotenv = "^0.9.9"
+transformers = "^4.56.1"
+langchain-text-splitters = "^0.3.11"
+langchain-community = "^0.3.29"
+langchain-core = "^0.3.76"
+pypdf = "^6.0.0"
+torch = "^2.8.0"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
 pytest-cov = "^5.0.0"
