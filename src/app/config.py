@@ -9,6 +9,8 @@ load_dotenv(override=True)
 class DataStorageConfig(BaseModel):
     documents_path: str = os.getenv("DOCUMENTS_PATH", "data/pdfs")
     chunks_path: str = os.getenv("CHUNKS_PATH", "data/chunks")
+    eval_path: str = os.getenv("EVAL_PATH", "data/metrics/eval.json")
+    answer_path: str = os.getenv("ANSWER_PATH", "data/metrics/answers.json")
 
 class ModelConfig(BaseModel):
     embedding_model: str = os.getenv("EMBEDDING_MODEL", "Qwen/Qwen3-Embedding-0.6B")

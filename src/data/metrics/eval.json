@@ -1,0 +1,122 @@
+[
+    {
+        "query": "Who is Tamao Kurabe in 13 Sentinels: Aegis Rim?",
+        "expected_answer": "Tamao Kurabe is a woman from the 1940s who closely resembles Aiba.",
+        "source_passages": [
+            {
+            "chunk_id": "bfb9dbd693584c35b4bb9fa4e59a104a4c70326f8716eace7c1d97e32688bb64",
+            "content": "mysteries surrounding the Sentinels. Tamao Kurabe is a woman from the 1940s who closely resembles\nAiba. Tetsuya Ida, while ostensibly a part-time instructor, is the chairman of the covert Special\nSynopsis\nSetting and characters",
+            "source": "data/pdfs/13_Sentinels__Aegis_Rim.pdf",
+            "page_label": "3"
+            }
+        ]
+        },
+        {
+        "query": "Which earlier game influenced the gameplay concepts of 13 Sentinels: Aegis Rim?",
+        "expected_answer": "The gameplay concepts of 13 Sentinels: Aegis Rim drew inspiration from Vanillaware's earlier game GrimGrimoire.",
+        "source_passages": [
+            {
+            "chunk_id": "f813b45a36e6ec9874439c3a4961e59637e81b4e9bf6e1dccb43dd198995d28e",
+            "content": "The gameplay concepts drew from Vanillaware's earlier game GrimGrimoire, with the balance of\nadventure and battle sections in 13 Sentinels being based on GrimGrimoire's original pitch.[36] The\nadventure sections were designed to feel like the gameplay of Shenmue...",
+            "source": "data/pdfs/13_Sentinels__Aegis_Rim.pdf",
+            "page_label": "7"
+            }
+        ]
+    },
+    {
+        "query": "How does combat work in Clair Obscur: Expedition 33?",
+        "expected_answer": "Combat in Clair Obscur: Expedition 33 is turn-based, allowing players to perform melee attacks, use items, shoot enemies, or activate skills. During enemy turns, players can dodge, parry, or jump in real time to avoid damage. A stamina system enables breaking enemies, and characters have unique mechanics such as elemental Stains, Stances, magical cards, and Perfection ranks.",
+        "source_passages": [
+          {
+            "chunk_id": "94987787d1ae215dcf96629a29e7e457f19717b0f9924e03faa5dd09ce55df21",
+            "content": "Genre(s) Role-playing\nMode(s) Single-player\nIn this screenshot, Lune, Gustave, and\nMaelle are fighting against an enemy. On\neach turn, players can perform a basic\nmelee attack, consume an item, use\naction points to shoot an enemy or use a\nskill....",
+            "source": "data/pdfs/Clair_Obscur__Expedition_33.pdf",
+            "page_label": "2"
+          }
+        ]
+    },
+    {
+        "query": "When was Clair Obscur: Expedition 33 released and how was it received?",
+        "expected_answer": "Clair Obscur: Expedition 33 was released on April 24, 2025, for PlayStation 5, Windows, and Xbox Series X/S. It received universal acclaim and sold over 3.3 million units within 33 days of release.",
+        "source_passages": [
+          {
+            "chunk_id": "06b0279a6beb52a77037467b268b4788231115e9434167cb9e49d303110d4cca",
+            "content": "Clair Obscur: Expedition 33 was released for\nPlayStation 5, Windows, and Xbox Series X/S on 24\nApril 2025 to universal acclaim, selling over 3.3\nmillion units within 33 days of release.[3]...",
+            "source": "data/pdfs/Clair_Obscur__Expedition_33.pdf",
+            "page_label": "1"
+          }
+        ]
+    },
+    {
+        "query": "Who developed and published Fire Emblem: Three Houses, and when was it released?",
+        "expected_answer": "Fire Emblem: Three Houses was developed by Intelligent Systems and Kou Shibusawa, published by Nintendo, and released in 2019 for the Nintendo Switch.",
+        "source_passages": [
+          {
+            "chunk_id": "c55044fec7e32847ea43517c53b6592d67b368269beb53314be042506f719df4",
+            "content": "Fire Emblem: Three Houses[a] is a 2019 tactical role-\nplaying video game developed by Intelligent Systems\nand Kou Shibusawa and published by Nintendo for the\nNintendo Switch...",
+            "source": "data/pdfs/Fire_Emblem__Three_Houses.pdf",
+            "page_label": "1"
+          }
+        ]
+    },
+    {
+        "query": "Which studio animated the 3D cutscenes in Fire Emblem: Three Houses?",
+        "expected_answer": "The 3D cutscenes in Fire Emblem: Three Houses were animated by Sanzigen.",
+        "source_passages": [
+          {
+            "chunk_id": "5dd740c50b5c12dceb860c0a97f896ad7a8beb2dab7c2ff1665e8e2156f2c6ae",
+            "content": "17. Morrissy, Kim (July 27, 2019). \"Fire Emblem: Three Houses 3D Cutscenes Were Animated\nBy Sanzigen\" (https://www.animenewsnetwork.com/interest/2019-07-27/fire-emblem-three-h\nouses-3d-cutscenes-were-animated-by-sanzigen/.149365). Anime News Network. Archived\n(https://web.archive.org/web/20190727211107/https://www.animenewsnetwork.com/interest/\n2019-07-27/fire-emblem-three-houses-3d-cutscenes-were-animated-by-sanzigen/.149365)\nfrom the original on July 27, 2019. Retrieved July 27, 2019.\n18. Intelligent Systems, Koei Tecmo (July 26, 2019). Fire Emblem: Three Houses (Nintendo\nSwitch). Nintendo. Scene: Credits.",
+            "source": "data/pdfs/Fire_Emblem__Three_Houses.pdf",
+            "page_label": "12"
+          }
+        ]
+    },
+    {
+        "query": "What is Fire Emblem Warriors: Three Hopes and when was it released?",
+        "expected_answer": "Fire Emblem Warriors: Three Hopes is a spin-off of Fire Emblem: Three Houses, developed as a hack and slash game in the style of Koei Tecmo's Dynasty Warriors. It was released for the Nintendo Switch on June 24, 2022.",
+        "source_passages": [
+          {
+            "chunk_id": "11ba07044cd0b0378608bc3e3d6ee9363130b0630c32472c34d85b98cc713d21",
+            "content": "In February 2022 during a Nintendo Direct presentation, Nintendo announced a spin-off of Three Houses\nfor the Nintendo Switch entitled Fire Emblem Warriors: Three Hopes ... released on June 24, 2022.",
+            "source": "data/pdfs/Fire_Emblem__Three_Houses.pdf",
+            "page_label": "10"
+          }
+        ]
+    },
+    {
+        "query": "Who developed Hollow Knight and when was it released?",
+        "expected_answer": "Hollow Knight was developed and published by the Australian independent studio Team Cherry. It was released for Windows on February 24, 2017, later for Linux and macOS the same year, and for Nintendo Switch, PlayStation 4, and Xbox One in 2018.",
+        "source_passages": [
+          {
+            "chunk_id": "922883d27d3bf3745decdda7b72518f97c96df11fae10b052c9527500798d89b",
+            "content": "Hollow Knight is a 2017 Metroidvania video game\ndeveloped and published by Australian independent\ndeveloper Team Cherry... It was released for Windows, Linux, and macOS in early 2017 and for the Nintendo Switch, PlayStation 4, and Xbox One in 2018.",
+            "source": "data/pdfs/Hollow_Knight.pdf",
+            "page_label": "1"
+          }
+        ]
+    },
+    {
+        "query": "What collaborations were announced for Stellar Blade in 2024 and 2025?",
+        "expected_answer": "In December 2024, Stellar Blade received a free Christmas-themed update with new cosmetics and minigames. On June 11, 2025, a Windows version was released alongside collaboration DLC with Goddess of Victory: Nikke.",
+        "source_passages": [
+          {
+            "chunk_id": "fdab5dbf3b3a74d10a20354f39c20bb9995b5d0dc368657b559e26cfe9aa7bfe",
+            "content": "release of collaboration DLC with Nier: Automata.[19] A free Christmas-themed update added new\ncosmetics and minigames on December 17, 2024.... In May 2025, Shift Up officially announced that a sequel to Stellar Blade is in development. In July 2025, Shift Up Announced that the game will be ported to Nintendo and Xbox.",
+            "source": "data/pdfs/Stellar_Blade.pdf",
+            "page_label": "4"
+          }
+        ]
+    },
+    {
+        "query": "How did Stellar Blade perform in Canada during its release month?",
+        "expected_answer": "According to the Entertainment Software Association of Canada, Stellar Blade was the second-best-selling software in Canada during its release month.",
+        "source_passages": [
+          {
+            "chunk_id": "f5378616ef598e33290f70b751c39f41b85c95b5a87f534e46b5f96013c64e91",
+            "content": "Entertainment Software Association of Canada, the game was the second-best-selling software in Canada\nfor the same month.",
+            "source": "data/pdfs/Stellar_Blade.pdf",
+            "page_label": "6"
+          }
+        ]
+    }
+]

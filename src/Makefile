@@ -16,6 +16,11 @@ format:
 	ruff format .
 
 # Run the application
-.PHONY: start
-start:
+.PHONY: index-documents
+index-documents:
 	python app/main.py
+
+# Run evaluation
+.PHONY: evaluate
+evaluate:
+	python app/launch_evaluation.py
