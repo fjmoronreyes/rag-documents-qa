@@ -7,6 +7,7 @@ from document_processor.chunks import Chunk
 from config import data_storage
 from logger import get_logger
 
+
 class ChunkBuilder:
     """
     Converts LangChain Documents into Chunks and optionally saves them locally.
@@ -59,7 +60,9 @@ class ChunkBuilder:
         """
         path = self.output_path / f"{filename}.json"
         with open(path, "w", encoding="utf-8") as f:
-            json.dump([chunk.__dict__ for chunk in chunks], f, ensure_ascii=False, indent=2)
+            json.dump(
+                [chunk.__dict__ for chunk in chunks], f, ensure_ascii=False, indent=2
+            )
         self.logger.info(f"Saved {len(chunks)} chunks to {path}")
 
     def _derive_filename(self, chunk: Chunk) -> str:

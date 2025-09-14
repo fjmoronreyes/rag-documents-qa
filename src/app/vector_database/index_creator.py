@@ -9,8 +9,11 @@ class IndexCreator:
     Responsible only for creating and indexing chunks into ChromaDB.
     """
 
-    def __init__(self, collection_name: str = vector_db_config.collection_name,
-                 persist_dir: str = vector_db_config.chroma_path):
+    def __init__(
+        self,
+        collection_name: str = vector_db_config.collection_name,
+        persist_dir: str = vector_db_config.chroma_path,
+    ):
         """
         Initialize Chroma client and collection.
         """

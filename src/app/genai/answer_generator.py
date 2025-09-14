@@ -1,7 +1,6 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from config import model_config
 from logger import get_logger
-import torch
 
 
 class AnswerGenerator:
@@ -18,7 +17,7 @@ class AnswerGenerator:
             model_name,
             dtype="auto",
             device_map="auto",
-            #low_cpu_mem_usage=True
+            # low_cpu_mem_usage=True
         )
         self.logger.info(f"Loaded generative model: {self.model_name}")
 
@@ -46,16 +45,12 @@ class AnswerGenerator:
         ]
 
         text = self.tokenizer.apply_chat_template(
-            messages,
-            tokenize=False,
-            add_generation_prompt=True,
-            enable_thinking=True
+            messages, tokenize=False, add_generation_prompt=True, enable_thinking=True
         )
 
         inputs = self.tokenizer([text], return_tensors="pt").to(self.model.device)
         outputs = self.model.generate(**inputs, max_new_tokens=max_new_tokens)
         response = self.tokenizer.decode(
-            outputs[0][len(inputs.input_ids[0]):],
-            skip_special_tokens=True
+            outputs[0][len(inputs.input_ids[0]) :], skip_special_tokens=True
         )
         return response

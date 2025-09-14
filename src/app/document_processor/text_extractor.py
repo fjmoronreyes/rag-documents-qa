@@ -6,6 +6,7 @@ from langchain_core.documents import Document
 from config import model_config, chunk_config
 from logger import get_logger
 
+
 class TextExtractor:
     """
     Extractor for reading and splitting text from a single PDF file.
