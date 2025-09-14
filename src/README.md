@@ -62,6 +62,11 @@ Run:
 make index-documents
 ```
 
+> **Note:** The embedding model [Qwen/Qwen3-Embedding-0.6B](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B) is **not included in this repository**.  
+> The first time you run the pipeline, it will be downloaded automatically from Hugging Face and stored in your local cache (default path: `~/.cache/huggingface/`).  
+> After usage, it is recommended to clear this cache to save disk space.  
+> This design choice avoids storing the model inside the repo or relying on private secrets.
+
 This will:
 - Load PDFs from your configured path  
 - Split them into overlapping chunks  
@@ -73,6 +78,10 @@ Run:
 ```
 make evaluate
 ```
+
+> **Note:** When running `make evaluate`, the generative model [Qwen/Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B#qwen3-highlights) will also be automatically downloaded from Hugging Face on first use and stored in the local cache (`~/.cache/huggingface/`).  
+> As with the embedding model, it is recommended to clean the cache after use if you want to free up disk space.  
+> This approach avoids committing the model into the repository or relying on external secrets.
 
 This will:
 - Build answers with the RAG pipeline  
@@ -98,3 +107,5 @@ python app/launch_evaluation.py # evaluation
 **Warning**:
 The pipeline requires that PDFs are available in the `data/pdfs` folder (default location).  
 It is strongly recommended **not to modify the default data paths** defined in the configuration (`DataStorageConfig`) unless strictly necessary.
+
+21 minutes - index*
