@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, List, Dict
 
+
 @dataclass
 class Chunk:
     chunk_id: str

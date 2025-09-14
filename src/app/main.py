@@ -41,7 +41,7 @@ class IndexingPipeline:
         """
         total_batches = (len(chunks) + self.batch_size - 1) // self.batch_size
         for i in range(0, len(chunks), self.batch_size):
-            batch = chunks[i:i + self.batch_size]
+            batch = chunks[i : i + self.batch_size]
             texts = [c.content for c in batch]
             embeddings = self.embedder.embed_documents(texts)
             for c, emb in zip(batch, embeddings):
@@ -51,6 +51,7 @@ class IndexingPipeline:
             self.logger.info(f"Indexed batch {current_batch}/{total_batches}")
             del texts, embeddings, batch
             gc.collect()
+
 
 if __name__ == "__main__":
     pipeline = IndexingPipeline()

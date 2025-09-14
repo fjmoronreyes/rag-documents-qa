@@ -3,6 +3,7 @@ from typing import Iterator
 from config import data_storage
 from logger import get_logger
 
+
 class DocumentLoader:
     """
     Loader for retrieving PDF documents from a given directory.
@@ -38,7 +39,9 @@ class DocumentLoader:
             list[Path]: A list of paths to the PDF files found.
         """
         self.logger.info(f"Loading documents from {self.base_path}")
-        pdfs = sorted(self.base_path.glob("*.pdf")) + sorted(self.base_path.glob("*.PDF"))
+        pdfs = sorted(self.base_path.glob("*.pdf")) + sorted(
+            self.base_path.glob("*.PDF")
+        )
         if not pdfs:
             self.logger.warning(f"No PDF files found in {self.base_path}")
         else:
