@@ -27,6 +27,16 @@ The goal of this project is to provide an end-to-end pipeline for **document que
 
 The repository also includes an **evaluation framework** to benchmark answer quality against a gold dataset, measuring both response accuracy and the percentage of answers that cite correct supporting passages.
 
+The implementation follows a **clean, modular architecture** designed for clarity, reproducibility, and extensibility. Each step of the pipeline is encapsulated in its own component, following the principle of *separation of concerns*. This makes it easy to swap out models, replace the vector database, or extend evaluation metrics without touching unrelated logic.  
+
+Key design principles:
+- **Object-Oriented Structure**: the pipeline is organized into classes that encapsulate state and behavior, providing clarity and modularity. While the design is object-oriented in structure, it does not rely on deep inheritance hierarchies or abstract interfaces instead, it favors composition and modular components over strict OOP patterns.
+- **Single Responsibility**: each class (e.g., `DocumentLoader`, `TextExtractor`, `ChunkBuilder`, `TextEmbedder`, `IndexCreator`) is responsible for exactly one task.  
+- **Modularity and Reusability**: embedding, indexing, and evaluation logic are decoupled, allowing independent testing and replacement.  
+- **Transparency and Logging**: all major operations are logged for traceability and debugging.  
+- **Reproducibility**: deterministic chunking, deduplication by `chunk_id`, and persistent storage ensure results can be reproduced across runs.  
+- **Extensibility**: the pipeline is designed so new embedding models, retrievers, or evaluation metrics can be integrated with minimal changes.  
+
 ## Document Processor
 
 The Document Processor module is responsible for preparing raw PDFs so they can be used in the RAG pipeline. It covers three key steps: loading the documents, extracting and splitting text, and converting those splits into structured chunks that can be indexed and retrieved later.
