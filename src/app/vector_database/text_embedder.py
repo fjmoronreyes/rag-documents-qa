@@ -2,6 +2,7 @@ from typing import List
 from sentence_transformers import SentenceTransformer
 from config import model_config
 from logger import get_logger
+import torch
 
 
 class TextEmbedder:
@@ -21,7 +22,9 @@ class TextEmbedder:
         self.logger.info(
             f"Loading embedding model {self.model_name} with target dim={self.embedding_dim}"
         )
-        self.model = SentenceTransformer(self.model_name)
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.logger.info(f"Loading embedding model {self.model_name} on device={device} with target dim={self.embedding_dim}")
+        self.model = SentenceTransformer(self.model_name, device=device)
 
     def embed_text(self, text: str) -> List[float]:
         embedding = self.model.encode(text, truncate_dim=self.embedding_dim)

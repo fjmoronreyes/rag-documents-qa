@@ -17,7 +17,6 @@ class AnswerGenerator:
             model_name,
             dtype="auto",
             device_map="auto",
-            # low_cpu_mem_usage=True
         )
         self.logger.info(f"Loaded generative model: {self.model_name}")
 
