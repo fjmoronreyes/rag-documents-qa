@@ -79,6 +79,9 @@ For this module, we chose to keep embedding and indexing as separate responsibil
 - Guarantee reproducibility by deduplicating on `chunk_id` before insertion.
 - Maintain transparency, since every step (embedding, indexing, deduplication) is explicitly logged.
 
+The system uses **SentenceTransformers** for embeddings because they provide a well-optimized interface for Hugging Face models, efficient batching, and broad support for retrieval-oriented architectures.
+
+
 ### Why Open Source Models
 
 One of the key design choices in this project was to rely on **open-source models** instead of external APIs. Today, most RAG implementations simply call OpenAI endpoints, which makes them harder to run locally and more dependent on external costs and service availability. We wanted something different: a system that is original, reproducible, and able to run fully on CPU.
