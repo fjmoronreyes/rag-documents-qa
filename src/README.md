@@ -13,6 +13,15 @@ This project was designed to be lightweight and reproducible. We recommend using
 
 ### Option A — Poetry (recommended)
 
+There are two variants of this command:
+- **Linux / macOS** → `make poetry-init` (tested and working)  
+- **Windows** → `make poetry-init-win` (provided for convenience, but not yet tested in a native Windows environment)  
+
+Both commands will:
+- Create a fresh virtual environment in `.rag-documents/`
+- Install all dependencies (including development ones)
+- Configure Poetry to install packages directly into this environment
+
 Create and configure the environment with:
 
 ```

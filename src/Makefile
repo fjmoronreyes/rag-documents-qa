@@ -9,6 +9,15 @@ poetry-init:
 	echo "Virtual environment created in .rag-documents. To activate it, run:" && \
 	echo "source .rag-documents/bin/activate"
 
+.PHONY: poetry-init-win
+poetry-init-win:
+	rmdir /s /q .rag-documents || exit 0
+	python -m venv .rag-documents
+	poetry config virtualenvs.create false
+	poetry install --with dev
+	@echo Virtual environment created in .rag-documents. To activate it, run:
+	@echo .\\.rag-documents\\Scripts\\activate
+
 # Code formatting & linting with Ruff
 .PHONY: format
 format:
